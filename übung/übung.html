@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zahlentraten</title>
+</head>
+<body>
+    <h1>Rate die Zahl</h1>
+    <script>
+        let x=Math.floor(Math.random()*100)+1;
+        let y=window.prompt("Rate die Zahl zwischen 1 und 100");
+
+        do{
+            if(y<x){
+                window.alert("Deine Zahl ist zu klein" );
+                y=window.prompt("Rate die Zahl nochmal");
+            }else if(y>x){
+                window.alert("Deine Zahl ist zu groß" );
+                y=window.prompt("Rate die Zahl nochmal");
+            }
+        }while(y!=x);
+
+        document.write("Bingo! Die Zahl ist <strong>"+x+"</strong>");
+    </script>
+    
+</body>
+</html>
