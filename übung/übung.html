@@ -9,19 +9,26 @@
     <h1>Rate die Zahl</h1>
     <script>
         let x=Math.floor(Math.random()*100)+1;
+        let count = 0
         let y=window.prompt("Rate die Zahl zwischen 1 und 100");
 
         do{
             if(y<x){
                 window.alert("Deine Zahl ist zu klein" );
+                document.write(""+y+" war zu klein <hr>");
+                count++;
                 y=window.prompt("Rate die Zahl nochmal");
             }else if(y>x){
                 window.alert("Deine Zahl ist zu groß" );
+                document.write(""+y+" war zu groß <hr>");
+                count++;
                 y=window.prompt("Rate die Zahl nochmal");
             }
         }while(y!=x);
 
-        document.write("Bingo! Die Zahl ist <strong>"+x+"</strong>");
+        count++;
+        document.write("Bingo! Die Zahl ist <strong>"+x+"</strong> <br>");
+        document.write("Du hast "+count+" Versuche gebraucht.");
     </script>
     
 </body>
